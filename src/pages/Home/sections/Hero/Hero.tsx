@@ -1,3 +1,4 @@
+import { GitHub, LinkedIn } from '@mui/icons-material'; // Ícones do Material-UI
 import { Box, Container, Grid, Typography, styled } from "@mui/material";
 import Avatar from "../../../../assets/images/avatar.jpg";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
@@ -61,6 +62,22 @@ const Hero = () => {
         }
     }));
 
+    const StyledLink = styled('a')(({ theme }) => ({
+        textDecoration: 'none',
+        color: 'inherit',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '10px 20px', // Adiciona espaçamento horizontal (largura maior)
+        width: 'auto', // Deixa o link mais largo automaticamente
+        borderRadius: '8px', // Opcional: bordas arredondadas para dar um efeito de botão
+        transition: 'background-color 0.3s ease-in-out', // Suave transição ao passar o mouse
+        '&:hover': {
+            color: theme.palette.secondary.main,
+            backgroundColor: theme.palette.action.hover, // Mudança de fundo ao hover
+        },
+    }));
+
     return (
         <>
             <StyledHero>
@@ -81,14 +98,20 @@ const Hero = () => {
                             <StyledJobTitle variant="h2">Desenvolvedor Backend</StyledJobTitle>
                             <ButtonContainer container spacing={2} justifyContent="center">
                                 <Grid item xs={12} md={5} display="flex" justifyContent="center">
-                                    <StyledButton>
-                                        <Typography>Download CV</Typography>
-                                    </StyledButton>
+                                <StyledLink href="https://github.com/ruhtar" target="_blank" rel="noopener noreferrer">
+                                        <StyledButton>
+                                            <GitHub sx={{ marginRight: '8px' }} />
+                                            <Typography>GitHub</Typography>
+                                        </StyledButton>
+                                    </StyledLink>
                                 </Grid>
                                 <Grid item xs={12} md={5} display="flex" justifyContent="center">
-                                    <StyledButton>
-                                        <Typography>Contact me</Typography>
-                                    </StyledButton>
+                                <StyledLink href="https://www.linkedin.com/in/arthur-amorim-bs/" target="_blank" rel="noopener noreferrer">
+                                        <StyledButton>
+                                            <LinkedIn sx={{ marginRight: '8px' }} />
+                                            <Typography>LinkedIn</Typography>
+                                        </StyledButton>
+                                    </StyledLink>
                                 </Grid>
                             </ButtonContainer>
                         </Grid>

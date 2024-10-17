@@ -12,6 +12,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
         border: `1px solid ${theme.palette.primary.contrastText}`,
         borderRadius: "3px",
         padding: "5px 15px",
+        cursor: 'pointer',
         width: "100%",
         color: theme.palette.primary.contrastText,
         display: "inline-flex",
