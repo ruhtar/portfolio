@@ -13,13 +13,13 @@ const NavBar = () => {
                 <StyledToobar>
                     <MenuItem>
                         {/* Link de âncora que rola até a seção About */}
-                        <a href="#about" style={{ textDecoration: 'none', color: 'inherit' }}>About</a>
+                        <a href="#about" style={{ textDecoration: 'none', color: 'inherit' }}>Sobre</a>
                     </MenuItem>
                     <MenuItem>
-                        <a href="#skills" style={{ textDecoration: 'none', color: 'inherit' }}>Skills</a>
+                        <a href="#skills" style={{ textDecoration: 'none', color: 'inherit' }}>Tecnologias</a>
                     </MenuItem>
                     <MenuItem>
-                        <a href="#projects" style={{ textDecoration: 'none', color: 'inherit' }}>Projects</a>
+                        <a href="#projects" style={{ textDecoration: 'none', color: 'inherit' }}>Projetos</a>
                     </MenuItem>
                 </StyledToobar>
             </AppBar>

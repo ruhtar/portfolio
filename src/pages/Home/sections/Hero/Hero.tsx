@@ -1,7 +1,9 @@
 import { Box, Container, Grid, Typography, styled } from "@mui/material";
 import Avatar from "../../../../assets/images/avatar.jpg";
 import { AnimatedBackground } from "../../../../components/AnimatedBackground/AnimatedBackground";
-import About from "../../About/About";
+import About from "../../../About/About";
+import Projects from "../../../Projects/Projects";
+import Skills from "../../../Skills/Skills";
 
 const Hero = () => {
 
@@ -66,6 +68,8 @@ const Hero = () => {
                 </Container>
             </StyledHero>
             <About />
+            <Skills/>
+            <Projects/>
         </>
     )
 }
